@@ -13,17 +13,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": "/",
+    "baseUrl": ".",
     "paths": {
-      "src/*": ["./src/*"],
-      "public/*": ["./public"]
+      "src/*": ["./*"]
     }
   },
   "exclude": ["node_modules"],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "src/pages/sitemap.xml.js"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/sitemap.xml.js", "utils/tailwind.js"]
 }
