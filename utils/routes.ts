@@ -1,5 +1,5 @@
-import { SitemapConfigItem } from '../typings/sitemap'
 import { EnumChangefreq } from '../typings/enum-sitemap'
+import { SitemapConfigItem } from 'src/typings/sitemap'
 
 export interface routeItem {
   title: string // title to display in components

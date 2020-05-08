@@ -1,40 +1,40 @@
-import React from 'react';
-import NProgress from 'nprogress';
-import Router from 'next/router';
-import config from '../utils/config';
+import React from 'react'
+import NProgress from 'nprogress'
+import Router from 'next/router'
+import config from '../utils/config'
 
 interface NextProgressProps {
-  color?: string;
-  startPosition?: number;
-  stopDelayMs?: number;
-  height?: number;
-  options?: any;
+  color?: string
+  startPosition?: number
+  stopDelayMs?: number
+  height?: number
+  options?: any
 }
 
 class NextProgress extends React.Component<NextProgressProps, any> {
   static defaultProps = {
-    color: config.theme.primary,
+    color: config.theme.colors.primary,
     startPosition: 0.3,
     stopDelayMs: 200,
     height: 3,
-  };
+  }
 
-  timer: number | null = null;
+  timer: number | null = null
 
   routeChangeStart = () => {
-    NProgress.set(this.props.startPosition || 0);
-    NProgress.start();
-  };
+    NProgress.set(this.props.startPosition || 0)
+    NProgress.start()
+  }
 
   routeChangeEnd = () => {
-    if (this.timer) clearTimeout(this.timer);
+    if (this.timer) clearTimeout(this.timer)
     this.timer = setTimeout(() => {
-      NProgress.done(true);
-    }, this.props.stopDelayMs);
-  };
+      NProgress.done(true)
+    }, this.props.stopDelayMs)
+  }
 
   render() {
-    const { color, height } = this.props;
+    const { color, height } = this.props
 
     return (
       <style jsx global>{`
@@ -105,20 +105,20 @@ class NextProgress extends React.Component<NextProgressProps, any> {
           }
         }
       `}</style>
-    );
+    )
   }
 
   componentDidMount() {
-    const { options } = this.props;
+    const { options } = this.props
 
     if (options) {
-      NProgress.configure(options);
+      NProgress.configure(options)
     }
 
-    Router.events.on('routeChangeStart', this.routeChangeStart);
-    Router.events.on('routeChangeComplete', this.routeChangeEnd);
-    Router.events.on('routeChangeError', this.routeChangeEnd);
+    Router.events.on('routeChangeStart', this.routeChangeStart)
+    Router.events.on('routeChangeComplete', this.routeChangeEnd)
+    Router.events.on('routeChangeError', this.routeChangeEnd)
   }
 }
 
-export default NextProgress;
+export default NextProgress

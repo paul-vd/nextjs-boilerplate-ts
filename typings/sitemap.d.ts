@@ -1,7 +1,7 @@
-import { SitemapItem } from 'sitemap';
+import { SitemapItem } from 'sitemap'
 
-export declare interface SitemapConfigItem extends Omit<SitemapItem, 'img' | 'links' | 'video'> {
-  img?: SitemapItem['img']; // transform type to optional
-  links?: SitemapItem['links']; // transform type to optional
-  video?: SitemapItem['video']; // transform type to optional
+declare interface SitemapConfigItem extends Omit<SitemapItem, 'img' | 'links' | 'video'> {
+  img?: SitemapItem['img'] // transform type to optional
+  links?: SitemapItem['links'] // transform type to optional
+  video?: SitemapItem['video'] // transform type to optional
 }

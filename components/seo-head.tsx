@@ -21,7 +21,7 @@ export default function SeoHead({ children, title = defaultTitle, description = 
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta property="og:locale" content={locale} />
-      {children && children}
+      {children}
     </Head>
   )
 }
