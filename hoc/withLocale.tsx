@@ -4,7 +4,7 @@ import Error from 'next/error'
 import { getDisplayName } from 'next/dist/next-server/lib/utils'
 import { isLocale, Locale } from '../translations/types'
 import { LocaleProvider } from '../context/LocaleContext'
-import { getInitialLocale } from 'src/translations/getInitialLocale'
+import { getInitialLocale } from 'src/translations/getLocale'
 import cookies from 'next-cookies'
 
 interface LangProps {

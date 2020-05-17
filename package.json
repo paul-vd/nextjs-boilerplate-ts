@@ -10,26 +10,28 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "accept-language-parser": "^1.5.0",
+    "classnames": "^2.2.6",
     "js-cookie": "^2.2.1",
-    "next": "^9.3.6",
+    "next": "^9.4.1",
     "next-cookies": "^2.0.3",
     "next-seo": "^4.4.0",
     "nprogress": "^0.2.0",
+    "popper.js": "^1.16.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "sitemap": "^6.1.2"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "@types/accept-language-parser": "^1.5.1",
+    "@types/classnames": "^2.2.10",
     "@types/js-cookie": "^2.2.6",
-    "@types/node": "^13.13.4",
+    "@types/node": "^14.0.1",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^16.9.34",
     "babel-plugin-emotion": "^10.0.33",
     "chalk": "^4.0.0",
-    "install": "^0.13.0",
-    "npm": "^6.14.5",
     "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.4.4",
-    "typescript": "^3.8.3"
+    "tailwindcss": "^1.4.6",
+    "typescript": "^3.9.2"
   }
 }

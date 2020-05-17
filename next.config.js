@@ -1,9 +1,7 @@
 const chalk = require('chalk')
-const path = require('path')
 const { PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD } = require('next/constants')
 
 const webpack = (config) => {
-  config.resolve.alias['src'] = path.join(__dirname, './') //absolute imports
   return config
 }
 
@@ -16,8 +14,8 @@ module.exports = (phase) => {
   const domain = isDev ? 'http://localhost:3000' : 'https://yoururl.com' // used og: url prefixing at build time
   if (initial) {
     const env = isStaging ? 'staging' : process.env.NODE_ENV
-    console.log(chalk.white(`[ ${chalk.keyword('orange')('dom')}  ]  ${domain}`))
-    console.log(chalk.white(`[ ${chalk.keyword('orange')('env')}  ]  ${env}`))
+    console.log(chalk.white(`${chalk.keyword('orange')('dom')}   - ${domain}`))
+    console.log(chalk.white(`${chalk.keyword('orange')('env')}   - ${env}`))
     initial = false
   }
   const env = {
@@ -30,12 +28,5 @@ module.exports = (phase) => {
   return {
     env,
     webpack,
-    ...(isDev
-      ? {
-          experimental: {
-            reactRefresh: true,
-          },
-        }
-      : {}),
   }
 }

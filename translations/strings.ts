@@ -13,6 +13,7 @@ const strings: Strings = {
     'deploy.title': 'Deploy',
     'deploy.description': 'Instantly deploy you Next.js site to a public URL with Vercel',
     'powered-by': 'Powered by',
+    'switch-language': 'switch language',
   },
   fr: {
     title: `Bienvenue dans <a href="https://nextjs.org"> Next.js!</a>`,
@@ -26,6 +27,7 @@ const strings: Strings = {
     'deploy.title': 'Déployer',
     'deploy.description': 'Déployez instantanément votre site Next.js sur une URL publique avec Vercel',
     'powered-by': 'Propulsé par',
+    'switch-language': 'changer la langue',
   },
 }
 
